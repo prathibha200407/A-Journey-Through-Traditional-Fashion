@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.bg-container {
+  background-image: url("image1.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+.tourism-card {
+  text-align: center;
+  background-color: #D2691E;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 5px;
+  animation: slideUp 2s ease-out forwards;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.button {
+  color: white;
+  background-color: #cc8925;
+  width: 138px;
+  height: 36px;
+  border-width: 0px;
+  border-radius: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+}
+
+
+.main-heading, .paragraph {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.favourite-places-bg-container {
+  background-image: url("image2.jpg");
+  height: 100vh;
+  background-size: cover;
+  padding: 24px;
+}
+.favourite-places-heading {
+  color: black;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: bold;
+}
+.favourite-place-card-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.favourite-place-card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.favourite-place-card-heading {
+  color: #0f0e46;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: bold;
+}
+.dress{
+  color: #6c6b70;
+  font-family: "Roboto";
+  font-size: 15px;  
+}
+.favourite-place-card-description {
+  color: #6c6b70;
+  font-family: "Roboto";
+  font-size: 13px;
+}
+.favourite-place-card-image {
+  width: 80px;
+  height: 100px;
+  margin-left: 90px
+}
+.detailed-view-bg-container {
+  background-image: url("image2.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+.detailed-view-heading {
+  color: black;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: bold;
+  padding: 24px;
+}
+.detailed-view-card-container {
+  background-color: white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: 24px;
+}
+.detailed-view-card-heading {
+  color: #0f0e46;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: bold;
+}
+.detailed-view-card-description {
+  color: #6c6b70;
+  font-family: "Roboto";
+  font-size: 13px;
+}
+.detailed-view-card-text-container {
+  padding: 16px;
+}
+
+
+
+
+
+
+
+
+
+.carousel-caption {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+
+.btn-dark {
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn-dark:hover {
+  background-color: #343a40;
+  transform: scale(1.05);
+}
+
+
+#sectionTajMahalDetailedView {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.detailed-view-heading,
+.detailed-view-card-heading {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+
+
+.carousel-item img {
+  animation: pulse 6s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+
+
+.carousel-caption h5,
+.carousel-caption p {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.carousel-caption h5 {
+  animation-delay: 0.5s;
+}
+
+.carousel-caption p {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+.detailed-view-card-container {
+  perspective: 1000px;
+}
+
+.detailed-view-card-text-container {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.detailed-view-card-text-container:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+
+
+
+
+
+/* Custom Arrows for Carousel */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev.custom-arrow {
+  left: 10px;
+}
+
+.carousel-control-next.custom-arrow {
+  right: 10px;
+}
+
+/* Left and Right Click Zones */
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-inner::before, .carousel-inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 4; /* ensure it's above the slides but below the arrows */
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.carousel-inner::before {
+  left: 0;
+}
+
+.carousel-inner::after {
+  right: 0;
+}
+
+/* Style for the carousel images to ensure they fit */
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: Background hover effect for better feedback */
+.carousel-inner::before:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-inner::after:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+/* Styles for Detailed View Card Section */
+.detailed-view-card-text-container {
+  padding: 16px;
+}
+
+/* Custom Styling for Carousel Arrows */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev.custom-arrow {
+  left: 10px;
+}
+
+.carousel-control-next.custom-arrow {
+  right: 10px;
+}
+
+/* Left and Right Click Zones for Carousel */
+.carousel-inner::before, .carousel-inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.carousel-inner::before {
+  left: 0;
+}
+
+.carousel-inner::after {
+  right: 0;
+}
+
+/* Carousel Image Fit */
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover Effect on Carousel Click Zones */
+.carousel-inner::before:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-inner::after:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+/* Hide all sections by default */
+#sectionMexicoDetailedView, #sectionFavouritePlaces {
+  display: none;
+}
+
+/* Show the targeted section */
+:target {
+  display: block;
+}
